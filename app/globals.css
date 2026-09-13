@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1A1A1A;
+  --color-primary-light: #2A2A2A;
+  --color-secondary: #F8F5F0;
+  --color-accent: #3C5A41;
+  --color-accent-light: #4A6E50;
+  --color-gold: #C8A97E;
+  --color-gold-light: #D4B995;
+  --color-text-dark: #121212;
+  --color-text-light: #FAF9F6;
+  --font-sans: var(--font-inter), 'Inter', sans-serif;
+  --font-serif: var(--font-playfair), 'Playfair Display', serif;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-secondary);
+    --foreground: var(--color-text-dark);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+.glass-effect {
+  background: rgba(248, 245, 240, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(200, 169, 126, 0.2);
+}
+
+.glass-effect-dark {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(200, 169, 126, 0.15);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
